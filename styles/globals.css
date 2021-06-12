@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spotify-green: #1db954;
+  --spotify-white: #ffffff;
+  --spotify-dark: #191414;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .sidebar__btn {
+    @apply rounded-xl shadow-md px-5 py-2 hover:border-b-4 text-sm font-medium focus:outline-none flex items-center;
+  }
+}
+
+.green {
+  background-color: var(--spotify-green) !important;
+}
+.white {
+  background-color: var(--spotify-white) !important;
+}
+.dark {
+  background-color: var(--spotify-dark) !important;
+}
