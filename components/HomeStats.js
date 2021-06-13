@@ -37,7 +37,7 @@ const HomeStats = () => {
         {topTen.length > 0 && topTen.map((user, i) => (
           <div key={user.uid} className="flex items-center space-x-2 py-4">
             <p className="level">{i+1}.</p>
-            <Image src={user.picture} alt="" className="rounded-full" layout="fixed" objectFit="cover" width="45" height="45" />
+            <Image src={user.picture || 'https://drgsearch.com/wp-content/uploads/2020/01/no-photo.png'} alt="" className="rounded-full" layout="fixed" objectFit="cover" width="45" height="45" />
             <h3 className="flex-1 font-medium text-gray-500">@{user.username}</h3>
             <div className="points flex items-center">
               <SparklesIcon className="h-4 mr-1 text-gray-300" />

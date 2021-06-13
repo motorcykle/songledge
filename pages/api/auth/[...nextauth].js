@@ -26,7 +26,7 @@ export default NextAuth({
           if (!doc.exists) {
             docRef.set({
               points: 0,
-              picture: user?.picture,
+              picture: user?.picture || "",
               username: user?.name,
             })
             .then(() => {
@@ -37,7 +37,7 @@ export default NextAuth({
             });
           } else {
             docRef.set({
-              picture: user?.picture,
+              picture: user?.picture || "",
               username: user?.name,
             }, { merge: true })
             .then(() => {
